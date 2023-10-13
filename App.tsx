@@ -18,7 +18,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar barStyle="light-content" translucent />
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
       <SafeAreaView style={styles.safeArea}>
         {fontsLoaded ? <Groups /> : <Loading />}
       </SafeAreaView>
