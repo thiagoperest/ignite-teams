@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  SafeAreaView,
-  StyleSheet,
-  StatusBar,
-  ActivityIndicator,
-} from "react-native";
+import { SafeAreaView, StyleSheet, StatusBar } from "react-native";
 import { Groups } from "@screens/Groups";
 import { ThemeProvider } from "styled-components";
 import {
@@ -13,6 +8,7 @@ import {
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
 import theme from "@theme/index";
+import { Loading } from "@components/Loading";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -24,7 +20,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <StatusBar barStyle="light-content" translucent />
       <SafeAreaView style={styles.safeArea}>
-        {fontsLoaded ? <Groups /> : <ActivityIndicator />}
+        {fontsLoaded ? <Groups /> : <Loading />}
       </SafeAreaView>
     </ThemeProvider>
   );
