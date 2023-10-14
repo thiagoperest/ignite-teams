@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, StatusBar } from "react-native";
-import { Groups } from "@screens/Groups";
+import { NewGroup } from "@screens/NewGroup";
 import { ThemeProvider } from "styled-components";
 import {
   useFonts,
@@ -24,7 +24,7 @@ export default function App() {
         translucent
       />
       <SafeAreaView style={styles.safeArea}>
-        {fontsLoaded ? <Groups /> : <Loading />}
+        {fontsLoaded ? <NewGroup /> : <Loading />}
       </SafeAreaView>
     </ThemeProvider>
   );
